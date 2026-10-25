@@ -1,0 +1,12 @@
+# API service account: may read telemetry from all registered devices.
+user roommemory_api
+topic read roommemory/v1/devices/+/telemetry
+topic read room-memory/+/telemetry
+
+# Per-device accounts: username must equal the device key, e.g. RM-001.
+# Each device can publish only to its own telemetry/status/ack topics and
+# subscribe only to its own command topic.
+pattern write roommemory/v1/devices/%u/telemetry
+pattern write roommemory/v1/devices/%u/status
+pattern write roommemory/v1/devices/%u/command-ack
+pattern read roommemory/v1/devices/%u/commands

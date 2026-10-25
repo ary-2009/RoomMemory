@@ -1,0 +1,4 @@
+.env
+infra/mosquitto/password_file
+infra/mosquitto/certs/*.pem
+*.dump
