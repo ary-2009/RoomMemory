@@ -4,4 +4,7 @@ node_modules/
 dist/
 *.tsbuildinfo
 roommemory-backup.dump
+*.dump
 infra/mosquitto/certs/
+**/password_file
+**/*.key
